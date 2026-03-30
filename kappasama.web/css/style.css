@@ -1,0 +1,603 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------
+reset.css
+-----------------------------------------------------------*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:where([hidden]:not([hidden='until-found'])) {
+    display: none !important
+}
+
+:where(html) {
+    -webkit-text-size-adjust: none;
+    color-scheme: dark light
+}
+
+@supports not (min-block-size:100dvb) {
+    :where(html) {
+        block-size: 100%
+    }
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    :where(html:focus-within) {
+        scroll-behavior: smooth
+    }
+}
+
+:where(body) {
+    block-size: 100%;
+    block-size: 100dvb;
+    line-height: 1.5;
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased
+}
+
+:where(input, button, textarea, select) {
+    font: inherit;
+    color: inherit
+}
+
+:where(textarea) {
+    resize: vertical;
+    resize: block
+}
+
+:where(button, label, select, summary, [role='button'], [role='option']) {
+    cursor: pointer
+}
+
+:where(:disabled) {
+    cursor: not-allowed
+}
+
+:where(label:has(>input:disabled), label:has(+input:disabled)) {
+    cursor: not-allowed
+}
+
+:where(button) {
+    border-style: solid
+}
+
+:where(a) {
+    text-underline-offset: .2ex
+}
+
+:where(ul, ol) {
+    list-style: none
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block
+}
+
+:where(img, picture, svg) {
+    max-inline-size: 100%;
+    block-size: auto
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word
+}
+
+:where(h1, h2, h3) {
+    line-height: calc(1em + 0.5rem)
+}
+
+:where(hr) {
+    border: none;
+    border-block-start: 1px solid;
+    color: inherit;
+    block-size: 0;
+    overflow: visible
+}
+
+:where(:focus-visible) {
+    outline: 2px solid var(--focus-color, Highlight);
+    outline-offset: 2px
+}
+
+:where(.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden)) {
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    border: 0 !important
+}
+
+/*--------------------------
+bass.css 
+--------------------------*/
+
+/* ガイド線 */
+* {
+    outline: 1px solid #f00;
+}
+
+/* ヘッダーメニュー部分 */
+
+h1 {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 5%;
+}
+
+/*======================
+ハンバーガーメニューcss
+========================*/
+
+.menu-btn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color: #d9faee;
+    opacity: 0.7;
+    border-radius: 30%;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: rgb(129, 224, 178);
+    position: absolute;
+}
+
+.menu-btn span::before {
+    bottom: 8px;
+}
+
+.menu-btn span::after {
+    top: 8px;
+}
+
+/*三本線をクリックした後*/
+#menu-btn-check:checked~.menu-btn span {
+    background: transparent;
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    transform: rotate(45deg);
+    bottom: 0;
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/*チェックボタンを消す*/
+#menu-btn-check {
+    display: none;
+}
+
+/*---------------------------
+ハンバーガーメニュー部分の実装
+-----------------------------*/
+
+.menu-content {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 30%;
+    height: 0;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 998;
+}
+#menu-btn-check:checked~.menu-content {
+    left: 60%;
+}
+
+/*---------------------------
+ハンバーガーメニュー部分の内装
+-----------------------------*/
+
+.menu-content ul li {
+    border-bottom: 5px solid rgb(129, 224, 178);
+    list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    color: #696969;
+    background: #ffffff;
+    font-size: 26px;
+    font-family: "beloved-script", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.menu-content ul li a:hover {
+    background: #d9faee;
+    opacity: 0.5;
+}
+
+.menu-content ul li a p {
+    font-size: 12px;
+    border-bottom: #d9faee 1px dotted;
+}
+
+/* ===================
+ポートフォリオ
+======================= */
+
+h2 {
+    width: 100%;
+    margin-top: 20% 10%;
+    text-align: center;
+    font-family: "beloved-script", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #696969;
+    font-size: 250%;
+}
+p {
+    margin: 10% auto;
+}
+h3 {
+    padding: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+    margin-top: 30%;
+    font-size: 150%;
+    color: rgb(129, 224, 178);
+    text-align: left;
+    font-family: "beloved-script", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: relative;
+}
+
+h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    width: 100%;
+    height: 5px;
+    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+}
+
+/* ==========================
+架空自作サイトの一覧の装飾
+============================= */
+.portfolio-3col ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+.portfolio-3col ul li {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    margin: 0 5% 0 0;
+    position: relative;
+}
+.portfolio-3col ul li a {
+    width: 100%;
+    height: auto;
+    margin: 30% auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.portfolio-3col ul li a img{
+    padding: 10%;
+    margin: 20%;
+    border: 1px #6ad1c8 solid;
+    border-radius: 30px;
+}
+.portfolio-3col ul li a img:hover {
+    background-color: #d9faee;
+    opacity: 0.8;
+}
+
+
+/*フッター部分の実装*/
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 3% 10%;
+    background-color: #d9faee;
+}
+
+.footer p {
+    width: 100%;
+    height: auto;
+    padding: 10% auto;
+}
+
+.copy-p {
+    text-align: center;
+}
+
+/*===================
+fotterプロフ装飾
+=====================*/
+.plofile {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 5% auto;
+}
+
+.plofile img {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.plofile p {
+    font-size: 14px;
+    text-align: justify;
+    margin: auto 3%;
+}
+
+/* top */
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10%;
+    width: 44px;
+    height: 44px;
+    background:rgb(129, 224, 178);
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+.top p a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+    color: #fff;
+}
+
+/*===============================
+profileページの装飾
+==================================*/
+
+.plofile-main {
+    display: block;
+    margin: 10%;
+    text-align: center;
+}
+.plofile-main h3 {
+    margin: 10% auto;
+    font-size: 300%;
+}
+
+.plofile-main img {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    margin: 10%;
+}
+
+.plofile-main dt {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    margin: 1% auto;
+    background: #dcf9ed;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.plofile-main dd {
+    border: 1px solid #dcf9ed;
+    padding: 10%;
+    margin: 0 0 10% 0;
+    text-align: justify;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+/* =====================
+media query
+======================= */
+@media screen and (min-width:768px){
+    body {
+        max-width: 100vw;
+        height: auto;
+        margin: auto;
+    }
+    
+    /*チェックボタンを消す*/
+    #menu-btn-check {
+        display: none;
+    }
+    /* 三本線表示なくす */
+    .menu-btn {
+        display: none;
+    }
+    
+    /*ヘッダーの装飾 */
+    .menu-content {
+        position: static;
+    }
+    .header {
+        width: auto;
+        height: auto;
+        margin: auto 10%;
+        position: relative;
+        vertical-align: bottom;
+    }
+    h1 a img {
+        position: absolute;
+        width: 5rem;
+        height: auto;
+        top: 10px;
+        left: 0;
+    }
+/*-----------------------
+ハンバーガーメニュー内部装飾
+--------------------------*/
+
+.menu-content ul li {
+    border-bottom: 5px solid rgb(129, 224, 178);
+    list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    color: #696969;
+    background: #ffffff;
+    font-size: 26px;
+    font-family: "beloved-script", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.menu-content ul li a:hover {
+    background: #d9faee;
+    opacity: 0.5;
+}
+
+.menu-content ul li a p {
+    font-size: 12px;
+    border-bottom: #d9faee 1px dotted;
+}
+    .menu-content ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        padding: 0;
+        background: #fff;
+        text-align: center;
+    }
+    .menu-content ul li {
+        display: inline-block;
+        margin: 5px 5px 0 5px;
+    }
+    .menu-content ul li a {
+        background: #fff;
+    }
+
+/* --------------
+main
+------------- */
+
+    .portfolio-3col ul li {
+        display: inline-block;
+        width: 10%;
+        height: 10%;
+        margin: 0 5% 0 0;
+        /* background: #d9faee; */
+        border-radius: 30%;
+    }
+    /* footer */
+
+    .plofile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .plofile img {
+        width: 40%;
+    }
+    .plofile p{ 
+        text-align: center;
+    }
+    /* slickの設定 */
+    .section {
+        margin: 6% 10% 3%;
+    }
+}
+
+/* =========================
+start時にフルスクリーン
+=========================== */
+.start {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9000;
+    opacity: 0.9;
+}
+
+.start p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    width: 30%;
+}
+
+/* =====================
+slickのcss 
+======================*/
+.slick {
+    /* .slick-slider {
+        width: 100%;
+    } */
+    .slick-prev:before,
+    .slick-next:before {
+        color: #fff;
+    }
+    .slick-prev {
+        left: 0;
+        z-index: 1;
+    }
+    
+    .slick-next {
+        right: 0;
+        z-index: 2;
+    }
+}
+
+/*===================
+scrollのcss 
+====================*/
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+
+.fade-in-up {
+    transform: translate(0 50px);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0.0);
+}

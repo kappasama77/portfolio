@@ -1,0 +1,224 @@
+﻿@charset "utf-8";
+
+/*===================================
+reset.css
+===================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  text-align: left;
+  zoom: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+input[type="button"], input[type="text"], input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+th, td {
+  border-collapse: collapse;
+}
+
+table th, table td {
+  white-space: nowrap;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: text-bottom;
+  vertical-align: -webkit-baseline-middle;
+  max-width: 100%;
+  height: auto;
+  width
+  /***/
+  : auto;
+}
+
+/*==================================
+style.css
+==================================*/
+
+/* * {outline: 1px solid #f00;} */
+
+/*ウインドウの背景色の設定*/
+body {
+  background: repeating-linear-gradient(
+  90deg,
+  #FFEB3B,
+  #f9d33b 50%,
+  #ffffff 50%,
+  #ffffff 
+);
+  /* background: #fff; */
+  margin: 5%;
+  padding: 0 3%;
+}
+
+/*ページタイトルの設定*/
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Tourney', cursive;
+  font-size: 2rem;
+  margin: auto 10px;
+  border-bottom: #f9d33b dotted 5px;
+}
+
+h1 img {
+  width: 10%;
+  height: 10%;
+  margin: 2%;
+}
+
+
+/*見出し上画像*/
+
+header p {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #ebe2a5;
+  font-size: 12px;
+}
+
+figure img {
+  width: 70vw;
+  height: auto;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*g-nav*/
+.g-nav {
+  display: block;
+  width: 100%;
+  margin: 5% auto;
+  color: #ffffff;
+  text-align: center;
+}
+
+.g-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.g-nav ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background: #f9d33b;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.g-nav ul li:hover {
+  background-color: rgb(97, 82, 58);
+}
+
+.g-nav li a {
+  position: relative;
+  top: 40%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 100%;
+}
+
+/*  かわうそについて */
+h2 {
+  font-size: 18px;
+  border-bottom: #f9d33b dotted 5px;
+  margin: 10% auto;
+}
+#howto p {
+  font-size: 14px;
+}
+
+h2 img {
+  width: 15%;
+  height: 15%;
+  border-radius: 20%;
+}
+
+h3 {
+  width: 40%;
+  height: 30%;
+  margin: 10% 0;
+  font-size: 20px;
+  background: #a7eaf2 ;
+  border-radius: 50% 5% 50% 5%;
+}
+#suizokukan ul {
+  font-size: 14px;
+  text-align: justify;
+  border: #f9d33b dotted 5px;
+  margin: 10% 0;
+}
+
+/*footer*/
+footer {
+  background: #f9d33b;
+  width: auto;
+  height: auto;
+  padding: 10%;
+  text-align: center;
+}
+footer a img{
+  width: 44px;
+  height: 44px;
+  margin: 3%;
+  background: #ffffff;
+  border-radius: 50%;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/kappacookie.web/</loc>
+  <priority>1.0</priority>
+  <lastmod>2023-07-18T13:41:32+09:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/index.html</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/contact.html</loc>
+  <priority>0.5</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/shop.html</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/privacypolicy.html</loc>
+  <priority>0.2</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://kappasama77.html.xdomain.jp/onlineshop.html</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+</urlset>
