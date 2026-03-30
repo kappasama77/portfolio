@@ -129,7 +129,7 @@ header
 /* ヘッダーメニュー部分 */
 
 .header {
-    background-color: #82f0a0;
+    background-color: #6ad1c8;
     width: 100%;
     height: auto;
     top: 0;
@@ -150,10 +150,15 @@ h1 a img {
     position: absolute;
     background: #ffffff;
     border-radius: 50%;
-    box-shadow: #389244 1px 2px 2px;
-    width: 5rem;
+    box-shadow: #6ad1c8 1px 2px 1px;
+    width: 7%;
+    border: 5px solid #fff;
     top: 5px;
     left: 10px;
+}
+/* 左上ロゴマークをホバーした時 */
+h1 a img:hover {
+    background-color: #EDFFEB;
 }
 
 /* naviの並び方 */
@@ -165,65 +170,105 @@ h1 a img {
     top: 0;
     right: 0;
     display: flex;
-    padding: 0;
-    background: #fff;
+    padding: 0 1%;
     text-align: center;
 }
 .menu-content ul li {
     display: inline-block;
-    margin: 5px 5px 0 5px;
-    border-bottom: 5px solid rgb(129, 224, 178);
+    margin: 5% 5px 0 5px;
+    border-bottom: 5px solid #6ad1c8;
     list-style: none;
 }
-
-/* マウスを持ってきたときの動作 */
-.menu-content ul :hover {
-    background: #d9faee;
-    opacity: 0.9;
-    transform: translateY(-8px);
-    border-radius: 20px;
-    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); */
-}
+/* naviの文字部分 */
 .menu-content ul li a {
         display: block;
-        color: #696969;
-        background: #ffffff;
-        font-size: 26px;
+        color: #087b76;
         font-family: "beloved-script", sans-serif;
         font-weight: 700;
         font-style: normal;
         text-decoration: none;
+    }
+    
+    /* 文字の大きさ*/
+    .menu-content ul li a ruby {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px #087b76; /* フチの太さと色 */
 }
 
- /* 文字の大きさ、下線 */
-.menu-content ul li a p {
-        font-size: 12px;
-        border-bottom: #d9faee 1px dotted;
+/* rubyの上文字部分 */
+ruby rt {
+    font-size: 0.7rem; /* 少し小さく */
+    color: #087b76; /* 少し薄い色 */
+    -webkit-text-stroke: 0px #087b76; /* フチの太さと色 */
+    margin-top: 1%;
+    text-align: center;
+}
+
+/* マウスを持ってきたときの動作 */
+.menu-content ul li:hover {
+    background: #d9faee;
+    border-radius: 0 0 10px 10px;
+    opacity: 0.9;
+    /* transform: translateY(-8px); */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); */
+}
+
+/* eyeキャッチ画像のサイズ */
+.img-kappa-top {
+    max-width: 100%;
+    height: auto;
+    margin: 2% 0 0 0;
+    padding: 0;
+    display: block;
+    vertical-align: top;
 }
 /* ===================
 ポートフォリオ
 ======================= */
 
+/* main全体 */
+main .main-text {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10%;
+}
+
+/* portfolio文字の装飾 */
 h2 {
     width: 100%;
-    margin-top: 20% 10%;
+    padding: 10% 10%;
     text-align: center;
     font-family: "beloved-script", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #696969;
-    font-size: 250%;
+    color: #6ad1c8;
+    -webkit-text-stroke: 1px #fff; /* フチの太さと色 */
+    font-size: 300%;
+    background-color: #6ad1c8;
 }
+/* ルビの小さい文字 */
+h2 ruby rt {
+    font-size: 0.6rem; /* 少し小さく */
+    color: #fff; /* 白 */
+    letter-spacing: 0.2em; /* 文字の間隔 */
+    margin-top: 2%;
+    text-align: center;
+}
+/* p全体の文字用に */
 p {
     margin: 10% auto;
 }
+
+/* ポートフォリオ用のサイト */
 h3 {
     padding: auto;
     margin-left: auto;
     margin-bottom: 5%;
     margin-top: 30%;
-    font-size: 150%;
-    color: rgb(129, 224, 178);
+    font-size: 200%;
+    color: #6ad1c8;
+    -webkit-text-stroke: 1px #6ad1c8; /* フチの太さと色 */
     text-align: left;
     font-family: "beloved-script", sans-serif;
     font-weight: 700;
@@ -286,7 +331,7 @@ h3::after {
     width: 100%;
     height: auto;
     padding: 3% 10%;
-    background-color: #d9faee;
+    background-color: #6ad1c8;
 }
 
 .footer p {
