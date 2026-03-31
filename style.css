@@ -221,8 +221,51 @@ ruby rt {
     margin: 2% 0 0 0;
     padding: 0;
     display: block;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
+/*---------------------------------
+アイキャッチ画像svgのアニメーション 
+-----------------------------------*/
+/* 目 */
+#eye-normal {
+    display: block;
+}
+#eye-wink {
+    display: none;
+}
+
+/* 波部分流れるようにする */
+#nami {
+    animation: move 3s infinite;
+}
+@keyframes move {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(50px);}
+}
+
+/* 文字 */
+#hart {
+    display: none;
+}
+#welcome {
+    display: none;
+}
+#Hi {
+    display: block;
+}
+
+/* 背景切り替え */
+#back-ck-blue {
+    display: block;
+}
+
+#back-ck-green {
+    display: none;
+}
+#back-ck-pink {
+    display: none;
+}
+
 /* ===================
 ポートフォリオ
 ======================= */
@@ -260,7 +303,7 @@ p {
     margin: 10% auto;
 }
 
-/* ポートフォリオ用のサイト */
+/* ポートフォリオ用のサイトの装飾 */
 h3 {
     padding: auto;
     margin-left: auto;
