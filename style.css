@@ -226,7 +226,7 @@ ruby rt {
 /*---------------------------------
 アイキャッチ画像svgのアニメーション 
 -----------------------------------*/
-/* 目 */
+/* 目※normal→マウスを乗せるとwinkする */
 #eye-normal {
     display: block;
 }
@@ -235,15 +235,16 @@ ruby rt {
 }
 
 /* 波部分流れるようにする */
-#nami {
-    animation: move 3s infinite;
-}
-@keyframes move {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(50px);}
+.wave {
+    animation: waveMove 10s linear infinite;
 }
 
-/* 文字 */
+@keyframes waveMove {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-1000px);}
+}
+
+/* 文字※最初はHiからスタート */
 #hart {
     display: none;
 }
@@ -254,7 +255,7 @@ ruby rt {
     display: block;
 }
 
-/* 背景切り替え */
+/* 背景切り替え※青→緑→ピンクの順番 */
 #back-ck-blue {
     display: block;
 }

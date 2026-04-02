@@ -63,7 +63,7 @@ setInterval(() => {
     images2.forEach(img => img.style.display = "none");
     images2[index2].style.display = "block";
     index2 = (index2 + 1) % images2.length;
-}, 1000);
+}, 2000);
 
 //背景
 const  images3 = [
@@ -78,4 +78,4 @@ setInterval(() => {
     images3.forEach(img => img.style.display = "none");
     images3[index3].style.display = "block";
     index3 = (index3 + 1) % images3.length;
-}, 1000); 
+}, 3000); 
