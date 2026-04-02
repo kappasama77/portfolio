@@ -266,6 +266,19 @@ ruby rt {
 #back-ck-pink {
     display: none;
 }
+/* 右手の動作 */
+#right-hand-2 {
+    transform-origin: center;
+    animation: waveHand 2s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(15deg);}
+    50%{transform: rotate(-10deg);}
+    75%{transform: rotate(15deg);}
+    100%{transform: rotate(0deg);}
+}
 
 /* ===================
 ポートフォリオ
