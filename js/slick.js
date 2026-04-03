@@ -79,3 +79,13 @@ setInterval(() => {
     images3[index3].style.display = "block";
     index3 = (index3 + 1) % images3.length;
 }, 3000); 
+
+// ハンバーガーメニュー
+const links =document.querySelectorAll("#menu a");
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+    })
+})

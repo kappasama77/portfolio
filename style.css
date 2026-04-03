@@ -162,10 +162,11 @@ h1 a img:hover {
 }
 
 /* naviの並び方 */
-.menu-content {
+.pc-menu {
+    display: flex;
     position: static;
 }
-.menu-content ul {
+.pc-menu ul {
     position: absolute;
     top: 0;
     right: 0;
@@ -173,14 +174,14 @@ h1 a img:hover {
     padding: 0 1%;
     text-align: center;
 }
-.menu-content ul li {
+.pc-menu ul li {
     display: inline-block;
     margin: 5% 5px 0 5px;
     border-bottom: 5px solid #6ad1c8;
     list-style: none;
 }
-/* naviの文字部分 */
-.menu-content ul li a {
+/* navの文字部分 */
+.pc-menu ul li a {
         display: block;
         color: #087b76;
         font-family: "beloved-script", sans-serif;
@@ -189,8 +190,8 @@ h1 a img:hover {
         text-decoration: none;
     }
     
-    /* 文字の大きさ*/
-    .menu-content ul li a ruby {
+/* 文字の大きさ*/
+.pc-menu ul li a ruby {
         font-size: 2rem;
         -webkit-text-stroke: 1px #087b76; /* フチの太さと色 */
 }
@@ -205,7 +206,7 @@ ruby rt {
 }
 
 /* マウスを持ってきたときの動作 */
-.menu-content ul li:hover {
+.pc-menu ul li:hover {
     background: #d9faee;
     border-radius: 0 0 10px 10px;
     opacity: 0.9;
@@ -213,6 +214,21 @@ ruby rt {
     /* border-radius: 20px; */
     /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); */
 }
+
+/* ハンバーガーメニューを非表示 */
+.hamburger {
+    display: none;
+}
+
+/* スマホ用navを非表示 */
+.menu {
+    display: none;
+}
+
+/* ----------------
+アイキャッチ
+------------------- */
+
 /* eyeキャッチ全体の場所指定 */
 .eye-catch {
     margin-top: -60px;
@@ -399,6 +415,9 @@ h3::after {
     opacity: 0.8;
 }
 
+/* ===================
+フッター
+====================== */
 
 /*フッター部分の実装*/
 .footer {
@@ -419,7 +438,7 @@ h3::after {
 }
 
 /*===================
-fotterプロフ装飾
+フッタープロフ装飾
 =====================*/
 .plofile {
     display: flex;
@@ -441,7 +460,9 @@ fotterプロフ装飾
     text-align: justify;
     margin: auto 3%;
 }
-
+/* ------------------
+クリックで上に戻る
+--------------------- */
 /* top */
 .top {
     position: fixed;
@@ -464,6 +485,61 @@ fotterプロフ装飾
     font-family: 'Secular One', sans-serif;
     color: #fff;
 }
+/* =======================
+index.htmlのスマホ用ページ
+========================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* 全体 */
+    body {
+            max-width: 100vw;
+            height: auto;
+            margin: auto;
+    }
+
+    /* ハンバーガーメニュー */
+    .pc-menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .menu {
+        display: block;
+    }
+
+    /* portfolio 架空サイトの装飾 */
+        .portfolio-3col ul li {
+        display: inline-block;
+        width: 10%;
+        height: 10%;
+        margin: 0 5% 0 0;
+        /* background: #d9faee; */
+        border-radius: 30%;
+    }
+    
+    /* footer */
+    .plofile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .plofile img {
+        width: 40%;
+    }
+    .plofile p{ 
+        text-align: center;
+    }
+
+    /* slickの設定 */
+    .section {
+        margin: 6% 10% 3%;
+    }
+
+} 
 
 /*===============================
 profileページの装飾
@@ -502,110 +578,6 @@ profileページの装飾
     text-align: justify;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 
-}
-
-/* =====================
-media query
-======================= */
-@media screen and (min-width:768px){
-    body {
-        max-width: 100vw;
-        height: auto;
-        margin: auto;
-    }
-    
-    /*チェックボタンを消す*/
-    /* #menu-btn-check {
-        display: none;
-    } */
-    /* 三本線表示なくす */
-    /* .menu-btn {
-        display: none;
-    } */
-    
-    /*ヘッダーの装飾 */
-
-    /* .header {
-        width: auto;
-        height: auto;
-        margin: auto 10%;
-        position: relative;
-        vertical-align: bottom;
-    } */
-/*-----------------------
-ハンバーガーメニュー内部装飾
---------------------------*/
-
-/* .menu-content ul li {
-    border-bottom: 5px solid rgb(129, 224, 178);
-    list-style: none;
-} */
-
-/* .menu-content ul li a {
-    display: block;
-    color: #696969;
-    background: #ffffff;
-    font-size: 26px;
-    font-family: "beloved-script", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-decoration: none;
-} */
-
-/* .menu-content ul li a:hover {
-    background: #d9faee;
-    opacity: 0.5;
-} */
-
-/* .menu-content ul li a p {
-    font-size: 12px;
-    border-bottom: #d9faee 1px dotted;
-} */
-    /* .menu-content ul {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        padding: 0;
-        background: #fff;
-        text-align: center;
-    } */
-    /* .menu-content ul li {
-        display: inline-block;
-        margin: 5px 5px 0 5px;
-    } */
-    /* .menu-content ul li a {
-        background: #fff;
-    } */
-
-/* --------------
-main
-------------- */
-
-    .portfolio-3col ul li {
-        display: inline-block;
-        width: 10%;
-        height: 10%;
-        margin: 0 5% 0 0;
-        /* background: #d9faee; */
-        border-radius: 30%;
-    }
-    /* footer */
-
-    .plofile {
-        display: flex;
-        justify-content: space-between;
-    }
-    .plofile img {
-        width: 40%;
-    }
-    .plofile p{ 
-        text-align: center;
-    }
-    /* slickの設定 */
-    .section {
-        margin: 6% 10% 3%;
-    }
 }
 
 /* =========================
