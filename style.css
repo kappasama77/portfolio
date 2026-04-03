@@ -129,7 +129,7 @@ header
 /* ヘッダーメニュー部分 */
 
 .header {
-    background-color: #6ad1c8;
+    /* background-color: #6ad1c8; */
     width: 100%;
     height: auto;
     top: 0;
@@ -161,10 +161,10 @@ h1 a img:hover {
     background-color: #EDFFEB;
 }
 
-/* naviの並び方 */
+/* navの並び方 */
 .pc-menu {
     display: flex;
-    position: static;
+    gap: 20px;
 }
 .pc-menu ul {
     position: absolute;
@@ -497,6 +497,16 @@ index.htmlのスマホ用ページ
             height: auto;
             margin: auto;
     }
+    .header {
+
+        list-style: none;
+        border-bottom: none;
+    }
+
+    /* アイキャッチ */
+    .eye-catch{
+        margin: -10px 0 0 0;
+    }
 
     /* ハンバーガーメニュー */
     .pc-menu {
@@ -507,6 +517,7 @@ index.htmlのスマホ用ページ
         position: fixed;
         top: 20px;
         right: 20px;
+        z-index: 1100;
     }
     .menu {
         display: block;
