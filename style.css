@@ -535,45 +535,40 @@ index.htmlのスマホ用ページ
         position: fixed;
         top: 20px;
         right: 10px;
-        z-index: 1000;
+        z-index: 1100;
     }
 
     /* navの装飾・配置 */
     .menu {
-    display: none;
+        position: fixed;
+        top: 0;
+        right: -100px;
+        width: 70%; /* 出てくるスライドメニューの幅 */
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: #d9faee;
+        transition: all 0.3s;
+        z-index: 1000;
+        /* 幅の設定 */
+        /* margin: auto; */
+        /* padding: 20px; */
+        /* 不透明度 */
+        opacity: 1;
+        /* メニューが多くなったらスクロールできるように */
+        overflow-y: auto; 
     }
-    .portfolio {
-        width: 100%;
-        height: auto;
-        padding: 30% 10%;
-        text-align: center;
-        font-family: "beloved-script", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        color: #6ad1c8;
-        -webkit-text-stroke: 1px #fff; /* フチの太さと色 */
-        font-size: 44px;
-        background-color: #6ad1c8;
+    .menu .active {
+        right: 0;
     }
     
     /*ハンバーガーがクリックされたら右からスライド*/
     .open .menu {
-    display: block;
-    width: 100%; /* 出てくるスライドメニューの幅 */
-    height: 100vh;
-    right: -100px;
-    margin: auto;
-    padding: 30%;
-    background-color: #d9faee;
-    opacity: 1;
-    transition: all 3s;
-    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
-    z-index: 700;
+        display: block;
     }
     /* 
-black-bg(ハンバーガーメニュー解除用bg)
-=================================== */
-.black-bg {
+    black-bg(ハンバーガーメニュー解除用bg)
+    =================================== */
+    .black-bg {
     position: fixed;
     left: 0;
     top: 0;
@@ -586,7 +581,7 @@ black-bg(ハンバーガーメニュー解除用bg)
     transition: all 0.5s;
     cursor: pointer;
     z-index: 100;
-    }
+}
 
     /*ハンバーガーメニューが開いたら表示*/
     .open .black-bg {
@@ -605,28 +600,45 @@ black-bg(ハンバーガーメニュー解除用bg)
     }
     /* 三本線の装飾 */
     .hamburger_line1 {
-    top: 1px;
+        top: 1px;
     }
     .hamburger_line2 {
-    top: 10px;
+        top: 10px;
     }
     .hamburger_line3 {
-    top: 20px;
+        top: 20px;
     }
-
+    
     /* クリックされたら */
     .open .hamburger_line1 {
     transform: rotate(-45deg);
     top: 11px;
-    }
+}
     .open .hamburger_line2 {
     opacity: 0;
-    }
+}
     .open .hamburger_line3 {
-    transform: rotate(45deg);
-    top: 11px;
+        transform: rotate(45deg);
+        top: 11px;
     }
+/*================
+ポートフォリオ 
+==================*/
 
+    /* h2の装飾 */
+    .portfolio {
+        width: 100%;
+        height: auto;
+        padding: 30% 10%;
+        text-align: center;
+        font-family: "beloved-script", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: #6ad1c8;
+        -webkit-text-stroke: 1px #fff; /* フチの太さと色 */
+        font-size: 44px;
+        background-color: #6ad1c8;
+    }
     /* portfolio 架空サイトの装飾 */
         .portfolio-3col ul li {
         display: inline-block;
