@@ -81,11 +81,15 @@ setInterval(() => {
 }, 3000); 
 
 // ハンバーガーメニュー
-const links =document.querySelectorAll("#menu a");
+window.onload = function () {
+    var nav = document.getElementById('nav-wrapper');
+    var hamburger = document.getElementById('hamburger');
+    var blackBg = document.getElementById('js-black-bg');
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        menu.classList.remove("active");
-    })
-})
+    hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+    });
+    blackBg.addEventListener('click', function () {
+        nav.classList.remove('open');
+    });
+};
