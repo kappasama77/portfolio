@@ -565,6 +565,8 @@ index.htmlのスマホ用ページ
     .menu li {
         margin-bottom: 20px;
     }
+    
+    /* navの中の文字装飾 */
     .menu a {
         text-decoration: none;
         color: #087b76;
