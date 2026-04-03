@@ -213,6 +213,10 @@ ruby rt {
     /* border-radius: 20px; */
     /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); */
 }
+/* eyeキャッチ全体の場所指定 */
+.eye-catch {
+    transform: translateY(-60px);
+}
 
 /* eyeキャッチ画像のサイズ */
 .img-kappa-top {
@@ -223,6 +227,7 @@ ruby rt {
     display: block;
     transform: translateY(1px);
 }
+
 /*---------------------------------
 アイキャッチ画像svgのアニメーション 
 -----------------------------------*/
@@ -266,6 +271,7 @@ ruby rt {
 #back-ck-pink {
     display: none;
 }
+
 /* 右手の動作 */
 @keyframes waveHand {
     0%{transform: rotate(0deg);}
@@ -279,6 +285,17 @@ ruby rt {
     will-change: transform;
 }
 
+/* 星が回る */
+@keyframes spin {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+.star {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spin 4s linear infinite;
+}
 
 /* ===================
 ポートフォリオ
