@@ -560,6 +560,18 @@ index.htmlのスマホ用ページ
     .menu .active {
         right: 0;
     }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .menu li {
+        margin-bottom: 20px;
+    }
+    .menu a {
+        text-decoration: none;
+        color: #000;
+    }
     
     /*ハンバーガーがクリックされたら右からスライド*/
     .open .menu {
@@ -575,7 +587,7 @@ index.htmlのスマホ用ページ
     width: 100vw;
     height: 100vh;
     z-index: 5;
-    background-color: #6ad1c8;
+    background-color: #fff;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
