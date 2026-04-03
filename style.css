@@ -498,18 +498,35 @@ index.htmlのスマホ用ページ
             max-width: 100vh;
             height: auto;
             margin: 0;
+            padding: 0;
     }
     .header {
-        background: none;
+        /* background: none; */
         border-bottom: none;
     }
 
     /* アイキャッチ */
-    .eye-catch{
-        margin: -10px 0 0 0;
+    .eye-catch {
+        margin: auto;
     }
 
-    /* ハンバーガーメニュー */
+    /* 背景の位置 */
+    .background {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: translateY(-10px);
+    }
+    /* アイキャッチ画像全体の位置 */
+    .character {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: translateY(50px);
+    }
+
+    /*=====================
+    ハンバーガーメニュー 
+    =======================*/
+    
     .pc-menu {
         display: none;
     }
@@ -524,16 +541,23 @@ index.htmlのスマホ用ページ
     /* navの装飾・配置 */
     .menu {
     display: none;
-}
-ruby rp{
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-}
-/*ハンバーガーがクリックされたら右からスライド*/
-.open .menu {
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        padding: 30% 10%;
+        text-align: center;
+        font-family: "beloved-script", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: #6ad1c8;
+        -webkit-text-stroke: 1px #fff; /* フチの太さと色 */
+        font-size: 44px;
+        background-color: #6ad1c8;
+    }
+    
+    /*ハンバーガーがクリックされたら右からスライド*/
+    .open .menu {
     display: block;
     width: 100%; /* 出てくるスライドメニューの幅 */
     height: 100vh;
