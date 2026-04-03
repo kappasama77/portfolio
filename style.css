@@ -215,7 +215,7 @@ ruby rt {
 }
 /* eyeキャッチ全体の場所指定 */
 .eye-catch {
-    transform: translateY(-60px);
+    margin-top: -60px;
 }
 
 /* eyeキャッチ画像のサイズ */
