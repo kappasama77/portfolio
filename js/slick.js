@@ -2,17 +2,17 @@
 $(document).ready(function(){
     $('.slick').slick({
         dots:true,
-        infinite:false,
+        infinite:true,
         speed: 300,
         fade: true,
         cssEase: 'linear',
         autoplay: true,
         arrows: true,
     });
-    $('.slider').slick({
-        appendArrows: $(element),
-        arrows: true
-    });
+    // $('.slider').slick({
+    //     appendArrows: $(element),
+    //     arrows: true
+    // });
 });
 // start時にフルスクリーン
 $(function() {
