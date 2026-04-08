@@ -11,6 +11,7 @@ $(document).ready(function(){
     });
     $('.slider').slick({
         appendArrows: $(element),
+        arrows: true
     });
 });
 // start時にフルスクリーン
