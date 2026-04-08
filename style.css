@@ -121,6 +121,9 @@ bass.css
 /* * {outline: 1px solid #f00;} */
 
 /* 全体にかけるもの */
+body {
+    background: #ffffff;
+}
 
 /* =========================
 header
