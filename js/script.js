@@ -1,3 +1,4 @@
+// --------------------------------------------------------
 // swiperの実装
 const swiper = new Swiper('.swiper', {
     loop: true,
@@ -5,7 +6,7 @@ const swiper = new Swiper('.swiper', {
     delay: 2000,
     },
 });
-
+// -------------------------------------------------------
 // start時にフルスクリーン
 window.addEventListener("load",function(){
     const loading = document.getElementById("loading");
@@ -18,10 +19,32 @@ window.addEventListener("load",function(){
         // アニメーション終わったら消す
         setTimeout(() => {
             loading.style.display = "none";
-        },1500);//終わる時間
-    }, 3000);//表示時間
+        },1000);//終わる時間
+    }, 2000);//表示時間
 });
 
+// ------------------------------------------------------
+// クリックでスクロール
+document.getElementById("scrollTop").addEventListener("click",function(e) {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+// スクロールした時だけ表示
+window.addEventListener("scroll",function() {
+    const btn = document.getElementById("scrollTop");
+    
+    if (window.scrollY > 500) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+});
+
+// -------------------------------------------------------------
 // 画像の切り替え
 // 目
 const  images1 = [
@@ -66,6 +89,7 @@ setInterval(() => {
     index3 = (index3 + 1) % images3.length;
 }, 3000); 
 
+// ---------------------------------------------------------------
 // ハンバーガーメニュー
 window.onload = function () {
     var nav = document.getElementById('nav-wrapper');
