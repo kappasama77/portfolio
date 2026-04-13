@@ -6,25 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="-portfolio site-" />
     <title>Kappasama.Web</title>
-    <!-- slick -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- slick -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <!-- css -->
     <link rel="stylesheet" href="style.css" media="all" />
     <link rel="stylesheet" href="https://use.typekit.net/vpu8xqi.css" />
+    <!-- javascript/swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- favicon -->
     <link rel="icon" href="img/favicon (1).ico" />
     <link rel="apple-touch-icon" href="img/nk.appleLogo.jpg" />
@@ -3305,14 +3292,17 @@
           </ruby>
         </h3>
         <section class="section">
-          <!-- slick部分 -->
-          <div class="slick">
-            <div><img src="img/kappaeye1.jpg" alt="slide-1" /></div>
-            <div><img src="img/kappaeye2.jpg" alt="slide-2" /></div>
-            <div><img src="img/kappaeye3.jpg" alt="slide-3" /></div>
-            <div><img src="img/kappaeye4.jpg" alt="slide-4" /></div>
-            <div><img src="img/kappaeye5.jpg" alt="slide-5" /></div>
+          <!-- swiper部分 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/kappaeye1.jpg" alt="slide-1" /></div>
+              <div class="swiper-slide"><img src="img/kappaeye2.jpg" alt="slide-2" /></div>
+              <div class="swiper-slide"><img src="img/kappaeye3.jpg" alt="slide-3" /></div>
+              <div class="swiper-slide"><img src="img/kappaeye4.jpg" alt="slide-4" /></div>
+              <div class="swiper-slide"><img src="img/kappaeye5.jpg" alt="slide-5" /></div>
+            </div>
           </div>
+
           <!-- 矢印を表示するカスタム要素 -->
           <div id="custom-arrows"></div>
         </section>
@@ -3366,27 +3356,18 @@
       </div>
     </footer>
 
-    <!------------------------------ 
+<!------------------------------ 
   動かすための設定・動作
------------------------------->
-    <!--jQuery CDN　読み込み-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-      crossorigin="anonymous"
-    ></script>
-    <!--slickの読み込み-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- slick.jsの読み込み -->
-    <script src="js/slick.js"></script>
-    <!-- start時にフルスクリーン -->
-    <div class="start">
-      <p><img src="img/kappasamaLogo1.png" alt="" /></p>
-    </div>
+-------------------------------->
+
+<!-- start時にフルスクリーン -->
+<div id="loading">
+  <img src="img/kappasamaLogo1.png" alt="logo">
+</div>
+<!-- swiperの読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- script.jsの読み込み -->
+    <script src="js/script.js"></script>
+
   </body>
 </html>

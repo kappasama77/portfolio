@@ -381,6 +381,18 @@ h3::after {
     background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
     background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
 }
+/* javascript swiperの実装 */
+.swiper {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: lightblue;
+}
 
 /* ==========================
 架空自作サイトの一覧の装飾
@@ -729,55 +741,48 @@ profileページの装飾
 }
 
 /* =========================
-start時にフルスクリーン
+全画面ローディング
 =========================== */
-.start {
-    background: #fff;
+#loading {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    z-index: 9000;
-    opacity: 0.9;
-}
+    height: 100%;
+    background: #fff;
 
-.start p {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     z-index: 9999;
-    width: 30%;
+    
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+/* rogo */
+#loading img {
+    width: 200px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-/* =====================
-slickのcss 
-======================*/
-.slick {
-    /* .slick-slider {
-        width: 100%;
-    } */
-    .slick-prev:before,
-    .slick-next:before {
-        color: #fff;
+/* フェードイン */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
-    .slick-prev {
-        left: 0;
-        z-index: 1;
-    }
-    
-    .slick-next {
-        right: 0;
-        z-index: 2;
-    }
+}
+
+/* フェードアウト */
+.fade-out {
+    opacity: 0;
 }
 
 /*===================
 scrollのcss 
 ====================*/
-.fade-in {
+/* .fade-in {
     opacity: 0;
     transition-duration: 500ms;
     transition-property: opacity, transform;
@@ -790,4 +795,4 @@ scrollのcss
 .scroll-in {
     opacity: 1;
     transform: translate(0.0);
-}
+} */
