@@ -252,9 +252,26 @@ ruby rt {
 /*---------------------------------
 アイキャッチ画像svgのアニメーション 
 -----------------------------------*/
-/* jsから表示順番を決めてデータを軽くするためのcss */
-.hidden {
-display: none;
+/*opacityを使用して画像の切り替え*/
+
+/* 背景 */
+/* display:noneの代わり */
+.background {
+opacity: 0;
+transition: 0.5s;
+}
+/* 最初に表示したいもの */
+.background.active {
+opacity: 1;
+}
+/* キャラクター */
+.character {
+opacity: 0;
+transition: 0.5s;
+}
+/* 最初に表示したいもの */
+.character.active {
+opacity: 1;
 }
 
 /* 目※normal→マウスを乗せるとwinkする */
