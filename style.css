@@ -258,7 +258,7 @@ ruby rt {
 /* display:noneの代わり */
 .background {
 opacity: 0;
-transition: 0.5s;
+transition: 0.5s ease;
 }
 /* 最初に表示したいもの */
 .background.active {
@@ -267,7 +267,7 @@ opacity: 1;
 /* キャラクター */
 .character {
 opacity: 0;
-transition: 0.5s;
+transition: 0.5s ease;
 }
 /* 最初に表示したいもの */
 .character.active {
