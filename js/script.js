@@ -67,7 +67,7 @@ setInterval(() => {
         images1[index1].style.display = "block";
     }
 
-    index1 = (index1 + 1) % images3.length;
+    index1 = (index1 + 1) % images1.length;
 }, 3000);
 });
 
@@ -91,7 +91,7 @@ setInterval(() => {
         images2[index2].style.display = "block";
     }
 
-    index2 = (index2 + 1) % images3.length;
+    index2 = (index2 + 1) % images2.length;
 }, 3000);
 });
 //背景
