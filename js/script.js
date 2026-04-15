@@ -116,18 +116,18 @@ let index3 = 0;
 setInterval(() => {
 
   // 目
-images1.forEach(img => { if (img) img.style.display = "none"; });
-if (images1[index1]) images1[index1].style.display = "block";
+images1.forEach(img => { if (img) img.classList.add("hidden"); });
+if (images1[index1]) images1[index1].classList.remove("hidden");
 index1 = (index1 + 1) % images1.length;
 
   // 文字
-images2.forEach(img => { if (img) img.style.display = "none"; });
-if (images2[index2]) images2[index2].style.display = "block";
+images2.forEach(img => { if (img) img.classList.add("hidden"); });
+if (images2[index2]) images2[index2].classList.remove("hidden");
 index2 = (index2 + 1) % images2.length;
 
   // 背景
-images3.forEach(img => { if (img) img.style.display = "none"; });
-if (images3[index3]) images3[index3].style.display = "block";
+images3.forEach(img => { if (img) img.classList.add("hidden"); });
+if (images3[index3]) images3[index3].classList.remove("hidden");
 index3 = (index3 + 1) % images3.length;
 
 }, 2000);
