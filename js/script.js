@@ -55,17 +55,17 @@ const images1 = [
 
 let index1 = 0;
 
-setInterval(() => {
-    images1.forEach(img => {
-    if (img) img.style.display = "none";
-    });
+// setInterval(() => {
+//     images1.forEach(img => {
+//     if (img) img.style.display = "none";
+//     });
 
-    if (images1[index1]) {
-    images1[index1].style.display = "block";
-    }
+//     if (images1[index1]) {
+//     images1[index1].style.display = "block";
+//     }
 
-    index1 = (index1 + 1) % images1.length;
-}, 1000);
+//     index1 = (index1 + 1) % images1.length;
+// }, 1000);
 
 
   // -------------------
@@ -78,17 +78,17 @@ const images2 = [
 
 let index2 = 0;
 
-setInterval(() => {
-    images2.forEach(img => {
-    if (img) img.style.display = "none";
-    });
+// setInterval(() => {
+//     images2.forEach(img => {
+//     if (img) img.style.display = "none";
+//     });
 
-    if (images2[index2]) {
-    images2[index2].style.display = "block";
-    }
+//     if (images2[index2]) {
+//     images2[index2].style.display = "block";
+//     }
 
-    index2 = (index2 + 1) % images2.length;
-}, 2000);
+//     index2 = (index2 + 1) % images2.length;
+// }, 2000);
 
 
   // -------------------
@@ -101,17 +101,36 @@ const images3 = [
 
 let index3 = 0;
 
+// setInterval(() => {
+//     images3.forEach(img => {
+//     if (img) img.style.display = "none";
+//     });
+
+//     if (images3[index3]) {
+//     images3[index3].style.display = "block";
+//     }
+
+//     index3 = (index3 + 1) % images3.length;
+// }, 3000);
+
 setInterval(() => {
-    images3.forEach(img => {
-    if (img) img.style.display = "none";
-    });
 
-    if (images3[index3]) {
-    images3[index3].style.display = "block";
-    }
+  // 目
+images1.forEach(img => { if (img) img.style.display = "none"; });
+if (images1[index1]) images1[index1].style.display = "block";
+index1 = (index1 + 1) % images1.length;
 
-    index3 = (index3 + 1) % images3.length;
-}, 3000);
+  // 文字
+images2.forEach(img => { if (img) img.style.display = "none"; });
+if (images2[index2]) images2[index2].style.display = "block";
+index2 = (index2 + 1) % images2.length;
+
+  // 背景
+images3.forEach(img => { if (img) img.style.display = "none"; });
+if (images3[index3]) images3[index3].style.display = "block";
+index3 = (index3 + 1) % images3.length;
+
+}, 2000);
 
 
   // -------------------
