@@ -252,18 +252,18 @@ ruby rt {
 /*---------------------------------
 アイキャッチ画像svgのアニメーション 
 -----------------------------------*/
-/* jsからデータを軽くする方法 */
+/* jsから表示順番を決めてデータを軽くするためのcss */
 .hidden {
 display: none;
 }
 
 /* 目※normal→マウスを乗せるとwinkする */
-#eye-normal {
+/* #eye-normal {
     display: block;
 }
 #eye-wink {
     display: none;
-}
+} */
 
 /* 波部分流れるようにする */
 .wave {
@@ -276,7 +276,7 @@ display: none;
 }
 
 /* 文字※最初はHiからスタート */
-#hart {
+/* #hart {
     display: none;
 }
 #welcome {
@@ -284,10 +284,10 @@ display: none;
 }
 #Hi {
     display: block;
-}
+} */
 
 /* 背景切り替え※青→緑→ピンクの順番 */
-#back-ck-blue {
+/* #back-ck-blue {
     display: block;
 }
 
@@ -296,7 +296,7 @@ display: none;
 }
 #back-ck-pink {
     display: none;
-}
+} */
 
 /* 右手の動作 */
 @keyframes waveHand {
