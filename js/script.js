@@ -57,16 +57,21 @@ window.addEventListener("load",function() {
     
     let index1 = 0;
 
-    setInterval(() => {
-        images1.forEach(img => {
-            if (img) img.style.display = "none";
-        });
-        if (images1[index1]) {
-            images1[index1].style.display = "block";
+setInterval(() => {
+    images1.forEach(img => {
+        if (img) {
+            img.style.display = "none";
         }
-    index1 = (index1 + 1) % images1.length;
-    }, 1000);
+    });
+
+    if (images1[index1]) {
+        images1[index1].style.display = "block";
+    }
+
+    index1 = (index1 + 1) % images3.length;
+}, 3000);
 });
+
     // 文字
 window.addEventListener("load",function() {
 const  images2 = [
@@ -79,38 +84,41 @@ let index2 = 0;
 
 setInterval(() => {
     images2.forEach(img => {
-    if (img) {
-        img.style.display = "none";
-    }
-});
-if (images2[index2]) {
-    images2[index2].style.display = "block";
-}
-    index2 = (index2 + 1) % images2.length;
-}, 2000);
-});
+        if (img) {
+            img.style.display = "none";
+        }
+    });
 
+    if (images2[index2]) {
+        images2[index2].style.display = "block";
+    }
+
+    index2 = (index2 + 1) % images3.length;
+}, 3000);
+});
 //背景
 window.addEventListener("load",function() {
 const  images3 = [
     document.getElementById("back-ck-blue"),
     document.getElementById("back-ck-green"),
     document.getElementById("back-ck-pink")
-];
+].filter(Boolean); // ← null除外
 
 let index3 = 0;
 
 setInterval(() => {
     images3.forEach(img => {
-    if (img) {
-        img.style.display = "none";
+        if (img) {
+            img.style.display = "none";
+        }
+    });
+
+    if (images3[index3]) {
+        images3[index3].style.display = "block";
     }
-});
-if (images3[index3]) {
-    images3[index3].style.display = "block";
-}
+
     index3 = (index3 + 1) % images3.length;
-}, 3000); 
+}, 3000);
 });
 // ---------------------------------------------------------------
 // ハンバーガーメニュー
