@@ -36,6 +36,8 @@ document.getElementById("scrollTop").addEventListener("click",function(e) {
 // スクロールした時だけ表示
 window.addEventListener("scroll",function() {
     const btn = document.getElementById("scrollTop");
+
+    if (!btn) return; //nullでバグにならないように
     
     if (window.scrollY > 500) {
         btn.style.display = "block";
@@ -47,21 +49,26 @@ window.addEventListener("scroll",function() {
 // -------------------------------------------------------------
 // 画像の切り替え
 // 目
-const  images1 = [
-    document.getElementById("eye-normal"),
-    document.getElementById("eye-wink")
-];
+window.addEventListener("load",function() {
+    const  images1 = [
+        document.getElementById("eye-normal"),
+        document.getElementById("eye-wink")
+    ];
+    
+    let index1 = 0;
 
-let index1 = 0;
-
-setInterval(() => {
-    images1.forEach(img => {
-    if (img) img.style.display = "none";
-});
-    images1[index1].style.display = "block";
+    setInterval(() => {
+        images1.forEach(img => {
+            if (img) img.style.display = "none";
+        });
+        if (images1[index1]) {
+            images1[index1].style.display = "block";
+        }
     index1 = (index1 + 1) % images1.length;
-}, 1000);
-// 文字
+    }, 1000);
+});
+    // 文字
+window.addEventListener("load",function() {
 const  images2 = [
     document.getElementById("Hi"),
     document.getElementById("hart"),
@@ -71,12 +78,20 @@ const  images2 = [
 let index2 = 0;
 
 setInterval(() => {
-    images2.forEach(img => img.style.display = "none");
+    images2.forEach(img => {
+    if (img) {
+        img.style.display = "none";
+    }
+});
+if (images2[index2]) {
     images2[index2].style.display = "block";
+}
     index2 = (index2 + 1) % images2.length;
 }, 2000);
+});
 
 //背景
+window.addEventListener("load",function() {
 const  images3 = [
     document.getElementById("back-ck-blue"),
     document.getElementById("back-ck-green"),
@@ -86,14 +101,20 @@ const  images3 = [
 let index3 = 0;
 
 setInterval(() => {
-    images3.forEach(img => img.style.display = "none");
+    images3.forEach(img => {
+    if (img) {
+        img.style.display = "none";
+    }
+});
+if (images3[index3]) {
     images3[index3].style.display = "block";
+}
     index3 = (index3 + 1) % images3.length;
 }, 3000); 
-
+});
 // ---------------------------------------------------------------
 // ハンバーガーメニュー
-window.addEventListener = function () {
+window.addEventListener("load", function () {
     var nav = document.getElementById('nav-wrapper');
     var hamburger = document.getElementById('hamburger');
     var blackBg = document.getElementById('js-black-bg');
@@ -104,4 +125,4 @@ window.addEventListener = function () {
     blackBg.addEventListener('click', function () {
         nav.classList.remove('open');
     });
-};
+});
