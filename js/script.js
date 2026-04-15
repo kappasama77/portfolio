@@ -59,9 +59,8 @@ window.addEventListener("load",function() {
 
 setInterval(() => {
     images1.forEach(img => {
-        if (img) {
+        if (img)
             img.style.display = "none";
-        }
     });
 
     if (images1[index1]) {
@@ -84,9 +83,8 @@ let index2 = 0;
 
 setInterval(() => {
     images2.forEach(img => {
-        if (img) {
+        if (img) 
             img.style.display = "none";
-        }
     });
 
     if (images2[index2]) {
@@ -109,7 +107,7 @@ let index3 = 0;
 
 setInterval(() => {
     images3.forEach(img => {
-if (img) img.style.display = "none";
+if (img)img.style.display = "none";
     });
 
     if (images3[index3]) {
