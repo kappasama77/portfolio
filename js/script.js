@@ -91,7 +91,7 @@ setInterval(() => {
 
 // ---------------------------------------------------------------
 // ハンバーガーメニュー
-window.onload = function () {
+window.addEventListener = function () {
     var nav = document.getElementById('nav-wrapper');
     var hamburger = document.getElementById('hamburger');
     var blackBg = document.getElementById('js-black-bg');
