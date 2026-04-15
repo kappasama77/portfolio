@@ -97,28 +97,28 @@ setInterval(() => {
 }, 3000);
 });
 //背景
-window.addEventListener("load",function() {
-const  images3 = [
+window.addEventListener("load", function () {
+
+const images3 = [
     document.getElementById("back-ck-blue"),
     document.getElementById("back-ck-green"),
     document.getElementById("back-ck-pink")
-].filter(Boolean); // ← null除外
+];
 
 let index3 = 0;
 
 setInterval(() => {
     images3.forEach(img => {
-        if (img) {
-            img.style.display = "none";
-        }
+if (img) img.style.display = "none";
     });
 
     if (images3[index3]) {
-        images3[index3].style.display = "block";
+images3[index3].style.display = "block";
     }
 
     index3 = (index3 + 1) % images3.length;
 }, 3000);
+
 });
 // ---------------------------------------------------------------
 // ハンバーガーメニュー
