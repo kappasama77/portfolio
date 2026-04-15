@@ -265,12 +265,12 @@ transition: 0.5s ease;
 opacity: 1;
 }
 /* キャラクター */
-.character {
+.change {
 opacity: 0;
 transition: 0.5s ease;
 }
 /* 最初に表示したいもの */
-.character.active {
+.change.active {
 opacity: 1;
 }
 
