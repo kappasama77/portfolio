@@ -55,7 +55,9 @@ const  images1 = [
 let index1 = 0;
 
 setInterval(() => {
-    images1.forEach(img => img.style.display = "none");
+    images1.forEach(img => {
+    if (img) img.style.display = "none";
+});
     images1[index1].style.display = "block";
     index1 = (index1 + 1) % images1.length;
 }, 1000);
